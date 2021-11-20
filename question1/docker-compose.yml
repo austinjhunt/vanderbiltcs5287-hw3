@@ -1,0 +1,23 @@
+version: "2.2"
+services:
+  cpu1:
+    image: austinjhunt/cs5287hw3image
+    container_name: cpu1
+    command: bash /hw3.sh
+    volumes:
+      - ./cpu1results:/results
+    cpus: 1
+  cpu0p5:
+    image: austinjhunt/cs5287hw3image
+    container_name: cpu0p5
+    command: bash /hw3.sh
+    volumes:
+      - ./cpu0p5results:/results
+    cpus: 0.5
+  cpu0p25:
+    image: austinjhunt/cs5287hw3image
+    command: bash /hw3.sh
+    container_name: cpu0p25
+    volumes:
+      - ./cpu0p25results:/results
+    cpus: 0.25
